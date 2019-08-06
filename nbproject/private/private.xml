@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/myRequested.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/bean/IssuedResourceBean.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/bean/LoginBean.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/AllPenalities.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/newResource.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/controller/StudentController.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/allResources.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/applicationContext.xml</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/controller/AdminController.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/dashboard.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/newRequestResource.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/reminderNewsletters.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/RequestExtension.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/newRequestResource.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/bean/ExtendRequestResourcesBean.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/login.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/util/General.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/dispatcher-servlet.xml</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/allIssued.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/models/ExtendRequestResourcesDao.java</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/SendnewsLetters.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/borrowRequest.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/allResources.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/dashboard.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/student/RequestExtension.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/view/admin/issuedRequests.jsp</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/james/Desktop/LmsSystemll/src/java/bean/UserBean.java</file>
+        </group>
+    </open-files>
+</project-private>

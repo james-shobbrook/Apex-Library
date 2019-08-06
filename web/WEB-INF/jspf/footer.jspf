@@ -1,0 +1,40 @@
+
+</div>
+</div>
+  <!-- Footer -->
+
+<footer class="footer">
+    Apex Library Management System
+  </footer>
+  <!-- // Footer -->
+ 
+<!--  <script>
+    var colors = {
+      "danger-color": "#e74c3c",
+      "success-color": "#81b53e",
+      "warning-color": "#f0ad4e",
+      "inverse-color": "#2c3e50",
+      "info-color": "#2d7cb5",
+      "default-color": "#6e7882",
+      "default-light-color": "#cfd9db",
+      "purple-color": "#9D8AC7",
+      "mustard-color": "#d4d171",
+      "lightred-color": "#e15258",
+      "body-bg": "#f6f6f6"
+    };
+    var config = {
+      theme: "html",
+      skins: {
+        "default": {
+          "primary-color": "#42a5f5"
+        }
+      }
+    };
+  </script>-->
+  <script src="${pageContext.request.contextPath}/js/app/vendor/all.js"></script>
+  <script src="${pageContext.request.contextPath}/js/app/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+  <%--  Custom File for All Our Application's JS Functions --%> 
+  <script src="${pageContext.request.contextPath}/js/app/custom.js"></script>
+</body>
+</html>

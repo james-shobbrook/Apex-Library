@@ -1,0 +1,174 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%  
+    if((request.getSession(false).getAttribute("User")== null) )
+{
+    
+%>
+
+<html class="hide-sidebar ls-bottom-footer" lang="en">
+<% } else{ 
+%>
+
+
+<html class="st-layout ls-top-navbar-large ls-bottom-footer show-sidebar sidebar-l3" lang="en">
+<% } %>
+
+
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  
+  <title>Apex Library</title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link href="${pageContext.request.contextPath}/css/all.css" rel="stylesheet">
+  <link href="${pageContext.request.contextPath}/css/app.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+</head>
+<%        
+        if((request.getSession(false).getAttribute("User")!= null) )
+{
+%>
+<style>
+    .table > tbody > tr > td, .table > thead > tr > th{
+        text-align: center;
+    }
+</style>
+<body>
+      <div class="st-container">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-size-large navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#sidebar-menu" data-toggle="sidebar-menu" class="toggle pull-left visible-xs"><i class="fa fa-ellipsis-v"></i></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="main-nav">
+          <ul class="nav navbar-nav navbar-nav-bordered navbar-right">
+          <!-- Notifications -->
+          <li class="dropdown notifications updates">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="badge badge-primary">${notifications.size()}</span>
+              </a>
+              <ul class="dropdown-menu" role="notification">
+                <li class="dropdown-header">Notifications</li>
+                <c:forEach var="notif" items="${notifications}">
+                    <li class="media">
+                      <div class="pull-right">
+                        <span class="label label-success text-capitalize">${notif.getType()}</span>
+                      </div>
+                      <div class="media-left">
+                          <i class="fa fa-warning"></i>
+<!--                        <img src="images/people/50/jimmy-2.jpg" alt="people" class="img-circle" width="30">-->
+                      </div>
+                      <div class="media-body">
+                        <a href="#" class="text-capitalize">${notif.getCreatedBy().getName()}</a> posted: ${notif.getMessage()} 
+                        <br>
+                        <span class="text-caption text-muted">${notif.getDateTime()}</span>
+                      </div>
+                    </li>
+                </c:forEach>
+                
+                
+              </ul>
+            </li>
+            <!-- User -->
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle user" data-toggle="dropdown">
+                <img src="${pageContext.request.contextPath}/imgs/apex.png" alt="Bill" class="img-circle" width="40" />Apex<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="app-student-billing.html"></a></li>
+                <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+
+      </div>
+    </div>
+     
+    <!-- Sidebar component with st-effect-1 (set on the toggle button within the navbar) -->
+    <div class="sidebar left sidebar-size-3 sidebar-offset-0 sidebar-visible-desktop sidebar-visible-mobile sidebar-skin-dark" id="sidebar-menu" data-type="collapse">
+      <div data-scrollable>
+
+        <div class="sidebar-block">
+          <div class="profile">
+            <a href="#">
+              <img src="${pageContext.request.contextPath}/imgs/apex.png" alt="people" class="img-circle width-80" />
+            </a>
+            <h4 class="text-display-1 margin-none text-capitalize">
+                ${sessionScope.UserName}
+            </h4>
+          </div>
+        </div>
+
+        <ul class="sidebar-menu">
+          <% if(request.getSession(false).getAttribute("User").equals("user")) { %>
+          <li class="">
+            <a href="${pageContext.request.contextPath}/user/allResources"><i class="fa fa-book"></i><span>All Resources</span></a>
+          </li>
+          <li >
+            <a href="${pageContext.request.contextPath}/user/myRequests"><i class="fa fa-file-text-o"></i><span>Issued Resources</span></a>
+          </li>
+          <li >
+            <a href="${pageContext.request.contextPath}/user/ExtensionRequests"><i class="fa fa-file-text-o"></i><span>Requested for Extension</span></a>
+          </li>
+          <li >
+            <a href="${pageContext.request.contextPath}/user/RequestNewResource"><i class="fa fa-file-text-o"></i><span>Request to Buy Resource</span></a>
+          </li>
+          <li >
+              <a href="${pageContext.request.contextPath}/user/remindersNewsletters"><i class="fa fa-file-text-o"></i><span>Newsletters & Reminders</span></a>
+          </li>
+          <% } else if((session.getAttribute("User").equals("admin"))){ %>
+          <li class="active"><a href="${pageContext.request.contextPath}/admin/dashboard"><i class="fa fa-bar-chart-o"></i><span>Dashboard</span></a></li>
+          <li class="hasSubmenu">
+            <a href="#course-menu"><i class="fa fa-mortar-board"></i><span>Resources</span></a>
+            <ul id="course-menu">
+              <li><a href="${pageContext.request.contextPath}/admin/addNewResource"><span>Add Resources</span></a></li>
+              <li><a href="${pageContext.request.contextPath}/admin/AllResources"><span>All Resources</span></a></li>
+            </ul>
+          </li>
+          <li class="hasSubmenu">
+            <a href="#forum-menu"><i class="fa fa-file-text-o"></i><span>Requests</span></a>
+            <ul id="forum-menu">
+              <li><a href="${pageContext.request.contextPath}/admin/issuedRequests"><span>New Resource Requests</span></a></li>
+              <li><a href="${pageContext.request.contextPath}/admin/issuedResources"><span>Issued Resources</span></a></li>
+              <li><a href="${pageContext.request.contextPath}/admin/requestedExtension"><span>Requests for Extension</span></a></li>
+              <li><a href="${pageContext.request.contextPath}/admin/requestedNewResource"><span>Requests for Buying New Resources</span></a></li>
+            </ul>
+          </li>
+          
+          <li><a href="${pageContext.request.contextPath}/admin/AllPenalities"><i class="fa fa-comments"></i><span>Penalties</span></a></li>
+          <li><a href="${pageContext.request.contextPath}/admin/SendNewsLetters"><i class="fa fa-notepad"></i><span>Send Newsletters</span></a></li>
+          
+          <% } %>
+        </ul>
+      </div>
+    </div>
+
+ 
+    <div class="st-pusher" id="content">
+
+      
+
+
+<% } else{ %>
+
+    <body class="login">
+<% } %>
+    
+    
